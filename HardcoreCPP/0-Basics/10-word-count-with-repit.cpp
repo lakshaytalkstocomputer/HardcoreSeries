@@ -19,4 +19,4 @@ int main()
 	 	previous = current;
 	 }
 	 cout<<"Total word count: "<<word_count<<'\n';
-}
+ }
