@@ -12,7 +12,7 @@ int main()
 			cout<<"Repeated word: "<<current<<"\n";
 		}
 
-		previous = current;
+		previous = current;`
 	}
 	return 0;
 }
