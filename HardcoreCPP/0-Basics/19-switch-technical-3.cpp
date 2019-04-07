@@ -18,9 +18,7 @@
 int main()
 {
 	/*
-	2. The values in the case labels must be constant expressions.
-	 	In particular, you  CANNOT use VARIABLE in case label.
-	3.  You CANNOT use the same value for two case labels.
+	4. You can use several case labels for a single case.
 	*/
 
 	char y = 'y'; // for yes
