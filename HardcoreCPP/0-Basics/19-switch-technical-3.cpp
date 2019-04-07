@@ -20,34 +20,22 @@ int main()
 	/*
 	4. You can use several case labels for a single case.
 	*/
+    cout<<"PLease enter a digit\n";
+    char a;
+    cin>>a;
+    switch(a)
+    {
+    	case '0':case'2':case'4':case'6':case'8':
+    		cout<<"Number is even\n";					
+    	break;
+    	
+    	case '1':case'3':case'5':case'7':case'9':
+    			cout<<"Number is odd\n";					
+       	break;
+    	default:
+    	cout<<"Wrong number!!";
+    }
 
-	char y = 'y'; // for yes
-	constexpr char n = 'n'; // for No
-	constexpr char m = 'm'; // for maybe
-	cout<<"Do you like fish? (yes (y), no (n), or maybe(m)? : \n";
-	char a;
-	cin>>a;
-
-	switch(a)
-	{
-		//case y:  error: Cannot use variable as case label!!! 
-		case 'y':
-		cout<<"Good!!!\n";
-		break;
-		
-		case n: // okay, as the variable is constexpr now!!
-		cout<<"WHy??? You should eat!!!!\n";
-		break;
-		
-		case m:
-		cout<<"Well You should try to like it!!\n";
-		break;
-		/*
-		case 'm': error: Cannot use same calse labels as above case has same value
-		cout<<"Try Try Try Hard!!! \n"; 
-		*/		
-		default:
-		cout<<"Wrong choice!!!";
-	}
+	// Lets check a number is even or odd
 	return 0;
 }
