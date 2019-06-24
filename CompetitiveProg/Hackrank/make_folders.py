@@ -10,7 +10,7 @@ def make_folders(no_of_quest):
 	except OSError:
 		print("Error in getting path")
 	else:
-		print("Curretn w0orking path: "+path)
+		print("Current working path: "+path)
 
 	name = 'Question'
 	folders= ['java','c','cpp','python']
@@ -29,12 +29,21 @@ def make_folders(no_of_quest):
 		for j in folders:
 			level2= level1+"/"+j
 			
+
 			try:
 				os.mkdir(level2)
 			except OSError:
 				print(" Creation of directory failed at level - 2")
 			else:
 				print(" Succes at level 2")
+
+			f = open(level2+"/STD.in","w")
+			f.close()
+
+
+			g = open(level2+"/STD.out","w")
+			g.close()
+
 	
 if __name__ == '__main__':
 	
