@@ -2,8 +2,10 @@
 //  input output from std library.
 use std::io;
 use rand::Rng;
+use std::cmp::Ordering;
 
 fn main(){
+    // // // PART -1
     // // print here is macro not a function, '!' at end
     // print!("Please enter a number: ");
     // println!();
@@ -27,20 +29,47 @@ fn main(){
     // //                         .expect("Error in reading!"));
     // // println!("You entered {}", guess);
 
-    println!("Guess the number: ");
 
-    let secret_number = rand::thread_rng()
-                                    .gen_range(1, 101);
+    // // // Part 2
+    // println!("Guess the number: ");
+    //
+    // let secret_number = rand::thread_rng()
+    //                                 .gen_range(1, 101);
+    //
+    // println!("The secret number is : {}", secret_number);
+    // println!("Please input your guess! ");
+    //
+    // let mut guess = String::new();
+    //
+    // io::stdin()
+    //     .read_line(&mut guess)
+    //     .expect("Failed to read line");
+    //
+    // println!("You guessed : {}", guess)
 
-    println!("The secret number is : {}", secret_number);
-    println!("Please input your guess! ");
+    // // // Part 3
+    println!("Enter your guess :  ");
 
     let mut guess = String::new();
 
     io::stdin()
         .read_line(&mut guess)
-        .expect("Failed to read line");
+        .expect("There is an error in reading input !");
 
-    println!("You guessed : {}", guess)
+
+    let guess: u32 = guess.trim()
+                    .parse()
+                    .expect("Error in parsing user input to integer!");
+
+    let secret_number = rand::thread_rng()
+                            .gen_range(1,101);
+
+
+    match guess.cmp(&secret_number) {
+        Ordering::Less => println!("Too small"),
+        Ordering::Greater => println!("Too big!"),
+        Ordering::Equal => println!("You win!"),
+    }
+
 }
 
