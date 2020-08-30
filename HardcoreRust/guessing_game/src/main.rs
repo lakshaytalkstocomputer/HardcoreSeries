@@ -48,28 +48,35 @@ fn main(){
     // println!("You guessed : {}", guess)
 
     // // // Part 3
-    println!("Enter your guess :  ");
-
-    let mut guess = String::new();
-
-    io::stdin()
-        .read_line(&mut guess)
-        .expect("There is an error in reading input !");
-
-
-    let guess: u32 = guess.trim()
-                    .parse()
-                    .expect("Error in parsing user input to integer!");
-
     let secret_number = rand::thread_rng()
-                            .gen_range(1,101);
+        .gen_range(1,101);
+
+    loop {
+        println!("Enter your guess :  ");
+
+        let mut guess = String::new();
+
+        io::stdin()
+            .read_line(&mut guess)
+            .expect("There is an error in reading input !");
 
 
-    match guess.cmp(&secret_number) {
-        Ordering::Less => println!("Too small"),
-        Ordering::Greater => println!("Too big!"),
-        Ordering::Equal => println!("You win!"),
+        let guess: u32 = match guess.trim().parse(){
+            Ok(num) => num,
+            Err(_) => {
+                println!("You Didn't Enter a number!");
+                continue;
+            },
+        };
+
+        match guess.cmp(&secret_number) {
+            Ordering::Less => println!("Too small"),
+            Ordering::Greater => println!("Too big!"),
+            Ordering::Equal => {
+                println!("You win!");
+                break;
+            },
+        }
     }
-
 }
 
