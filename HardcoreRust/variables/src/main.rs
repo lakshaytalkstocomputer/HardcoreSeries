@@ -19,6 +19,12 @@ fn main() {
 
     const constant_number : u32 = 111;
 
+    println!("COnstant Number: {} ", constant_number);
+
+    // this is is not allowed as variable of this already exists as constant Number
+    // // let constant_number = 222;
+    // // println!("Constant Number After shadowing it with let : {} ", constant_number);
+
     // below is not allowed. Why? because const are immutable and cannot be changed to mutable!
     // // const mut another_constant_number :u32 = 122;
 
@@ -38,13 +44,8 @@ fn main() {
     // //  Therefor e we need to mention mut.
 
     let mut shadow_number = 1010;
-
+    println!("Shoadow Number : {}", shadow_number)
     // // this is not allowed! Why? Because it changes the type of the variable
     // // shadow_number = "hello";
-
-
-
-
-
 
 }
