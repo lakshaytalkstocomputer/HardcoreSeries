@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	f "fmt"
 )
 
 /*
@@ -25,10 +25,10 @@ func main(){
 		Milanocortina
 	)
 
-	fmt.Println("These cities hosted or will host the Summer Olympics in the provided year...")
+	f.Println("These cities hosted or will host the Summer Olympics in the provided year...")
 
-	fmt.Printf("%-18s %-18s \n", "City", "Year")
-	fmt.Printf("%-18s %-18v \n", "Milano Cortina", Milanocortina)
-	fmt.Printf("%-18s %-18v \n", "Beijing", Beijing)
-	fmt.Printf("%-18s %-18v \n", "Sochi", Sochi)
+	f.Printf("%-18s %-18s \n", "City", "Year")
+	f.Printf("%-18s %-18v \n", "Milano Cortina", Milanocortina)
+	f.Printf("%-18s %-18v \n", "Beijing", Beijing)
+	f.Printf("%-18s %-18v \n", "Sochi", Sochi)
 }
