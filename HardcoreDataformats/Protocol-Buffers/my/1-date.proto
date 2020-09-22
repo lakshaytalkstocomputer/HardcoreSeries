@@ -1,0 +1,8 @@
+// We are defining the syntax for the proto file
+syntax = "proto3";
+
+message Date{
+    int32 Year = 0;
+    int32 Month = 1;
+    int32 Day = 2;
+}
