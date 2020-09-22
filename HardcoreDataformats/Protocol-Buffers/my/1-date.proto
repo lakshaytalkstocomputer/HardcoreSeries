@@ -2,7 +2,7 @@
 syntax = "proto3";
 
 message Date{
-    int32 Year = 0;
-    int32 Month = 1;
-    int32 Day = 2;
+    int32 year = 0;
+    int32 month = 1;
+    int32 day = 2;
 }

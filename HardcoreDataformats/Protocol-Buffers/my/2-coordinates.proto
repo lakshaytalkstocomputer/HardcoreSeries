@@ -1,6 +1,6 @@
 syntax = "proto3";
 
 message Coordinates{
-    float Latitide = 0;
-    float Longitude = 1;
+    float latitide = 0;
+    float longitude = 1;
 }
