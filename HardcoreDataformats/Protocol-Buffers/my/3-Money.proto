@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 message Money{
-    string currency_code = 0;
-    int32 integeral_amount = 1;
-    int32 decimal_amount = 2;
+    string currency_code = 1;
+    int32 integeral_amount = 2;
+    int32 decimal_amount = 3;
 }
