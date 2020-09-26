@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-func printArray(array []int32){
+func printSlice(array []int32){
 	fmt.Println("Array : ", array)
-	fmt.Println("Length of Slice: ", len(array))
-	fmt.Println("Capacity of Slice: ", cap(array))
+	//fmt.Println("Length of Slice: ", len(array))
+	//fmt.Println("Capacity of Slice: ", cap(array))
 }
 
 func populateArray(array []int32){
@@ -17,6 +17,11 @@ func populateArray(array []int32){
 
 }
 
+func printArray(array [5]int32){
+	fmt.Println("Array : ", array)
+	fmt.Println("Length of Array: ", len(array))
+	fmt.Println("Capacity of Array: ", cap(array))
+}
 
 func main(){
 	/*
@@ -28,17 +33,24 @@ func main(){
 	    *
 	 */
 	var someSlice []int32 = make([]int32, 5)
-	printArray(someSlice)
+	printSlice(someSlice)
 
 	someSlice[0] = 1
-	printArray(someSlice)
+	printSlice(someSlice)
 
 	populateArray(someSlice)
-	printArray(someSlice)
+	printSlice(someSlice)
 
 	someSlice = append(someSlice, 10)
-	printArray(someSlice)
+	printSlice(someSlice)
 
 	someSlice = append(someSlice, 11)
-	printArray(someSlice)
+	printSlice(someSlice)
+
+	/* */
+	var arrayOfSomeKind = [5]int32{1,2,3,4,5}
+	printArray(arrayOfSomeKind)
+	fmt.Println()
+	sliceFromArray := arrayOfSomeKind[0:3]
+	println(sliceFromArray)
 }
