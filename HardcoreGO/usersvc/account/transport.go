@@ -3,6 +3,7 @@ package account
 import (
 	"context"
 	"encoding/json"
+	"github.com/go-kit/kit/endpoint"
 	"net/http"
 	"github.com/gorilla/mux"
 )
@@ -53,4 +54,37 @@ func DecodeGetUserRequest(ctx context.Context, r *http.Request)(interface{}, err
 
 func EncodeResponse(ctx context.Context, w http.ResponseWriter, response interface{}) error{
 	return json.NewEncoder(w).Encode(response)
+}
+
+// Making endpoint Adapter
+type Endpoints struct {
+	CreateUser 	endpoint.Endpoint
+	GetUser		endpoint.Endpoint
+}
+
+func MakeEndpoints(s UserService) Endpoints{
+	return Endpoints{
+		CreateUser: makeCreateUserEndpoint(s),
+		GetUser   : makeGetUserEndpoint(s),
+	}
+}
+func makeCreateUserEndpoint(s UserService) endpoint.Endpoint{
+	return func(ctx context.Context, request interface{}) (interface{}, error){
+		req := request.(CreateUserRequest)
+
+		ok, err := s.CreateUser(ctx, req.Email, req.Password)
+
+		return CreateUserResponse{ok}, err
+	}
+}
+
+func makeGetUserEndpoint( s UserService) endpoint.Endpoint{
+	return func(ctx context.Context, request interface{}) (response interface{}, err error) {
+		req := request.(GetUserRequest)
+		email, err := s.GetUser(ctx, req.Id)
+
+		return GetUserResponse{
+			Email: email,
+		}, err
+	}
 }
