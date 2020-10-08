@@ -11,6 +11,13 @@
 //  test may continue to pass even uf the code doesn't work as intended.
 package main
 
+// Constants should improve the performance of your application
+//  as it saves you creating the "Hello, " string instance every time
+//  Hello2() is called.
+//
+// Refactor the constants
+const englishHelloPrefix = "Hello, "
+
 // We write this function by listening to compiler
 //  On First run, it tells that it did not find any function named Hello2()
 //    Then we define a function named Hello2()
@@ -19,5 +26,5 @@ package main
 //  On third run, it tells us that the test that runs Hello2 fails,becuase it did not return the expected
 //    Then we change the logic of function
 func Hello2(name string) string{
-	return "Hello, " + name
+	return englishHelloPrefix + name
 }
