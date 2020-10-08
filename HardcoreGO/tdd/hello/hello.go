@@ -14,7 +14,7 @@ func main(){
 
 // Above function should be written as :
 func Hello() string{
-	return "Hello, world"
+	return "Hello, World"
 }
 
 func main(){
