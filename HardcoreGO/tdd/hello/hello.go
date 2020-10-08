@@ -38,7 +38,7 @@ import "fmt"
 //
 // Refactor the constants
 const englishHelloPrefix = "Hello, "
-
+const spanishHelloPrefix = "Hola, "
 // We write this function by listening to compiler
 //  On First run, it tells that it did not find any function named Hello2()
 //    Then we define a function named Hello2()
@@ -52,7 +52,11 @@ func Hello(name string, language string) string{
 	}
 
 	if language == "spanish"{
-		return "Hola, " + name
+		return spanishHelloPrefix + name
+	}
+
+	if language == "french"{
+		return "Bonjour, " + name
 	}
 
 	return englishHelloPrefix + name
