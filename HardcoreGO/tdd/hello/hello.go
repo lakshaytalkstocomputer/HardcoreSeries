@@ -37,8 +37,11 @@ import "fmt"
 //  Hello2() is called.
 //
 // Refactor the constants
+const spanish ="spanish"
+const french ="french"
 const englishHelloPrefix = "Hello, "
 const spanishHelloPrefix = "Hola, "
+const frenchHelloPrefix  = "Bonjour, "
 // We write this function by listening to compiler
 //  On First run, it tells that it did not find any function named Hello2()
 //    Then we define a function named Hello2()
@@ -51,15 +54,17 @@ func Hello(name string, language string) string{
 		name = "World"
 	}
 
-	if language == "spanish"{
-		return spanishHelloPrefix + name
+	// Define a default if no language or unknown language provided by default
+	prefix := englishHelloPrefix
+
+	switch language {
+		case spanish:
+			prefix = spanishHelloPrefix
+		case french:
+			prefix = frenchHelloPrefix
 	}
 
-	if language == "french"{
-		return "Bonjour, " + name
-	}
-
-	return englishHelloPrefix + name
+	return prefix + name
 }
 
 func main(){

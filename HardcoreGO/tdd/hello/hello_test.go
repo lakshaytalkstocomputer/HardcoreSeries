@@ -55,4 +55,12 @@ func TestHello(t *testing.T){
 
 		assertCorrectMessage(t, got, want)
 	})
+
+	// Test Unknown language default to engloish
+	t.Run("in unknown language", func(t *testing.T) {
+		got  := Hello("Lakshay", "Klingon")
+		want := "Hello, Lakshay"
+
+		assertCorrectMessage(t, got, want)
+	})
 }
