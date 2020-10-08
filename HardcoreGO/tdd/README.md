@@ -8,7 +8,7 @@
 * Refactor.
 
 ## TDD process and why the steps are important
-* _Write a failing test and see_ it fail, so we know we have
+* _Write a failing test and see_ it fails, so we know we have
 written a _relevant test_ for our requirements and seen it produces an _easy to 
 to understand description of failure_.
 *  Writing the smallest amount of code to make it pass so know we have working
