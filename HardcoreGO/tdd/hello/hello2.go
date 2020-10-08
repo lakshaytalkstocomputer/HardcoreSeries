@@ -26,5 +26,8 @@ const englishHelloPrefix = "Hello, "
 //  On third run, it tells us that the test that runs Hello2 fails,becuase it did not return the expected
 //    Then we change the logic of function
 func Hello2(name string) string{
+	if name == ""{
+		name = "World"
+	}
 	return englishHelloPrefix + name
 }
