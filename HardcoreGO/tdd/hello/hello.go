@@ -46,13 +46,18 @@ const englishHelloPrefix = "Hello, "
 //    Then we change the function to accept string and return string
 //  On third run, it tells us that the test that runs Hello2 fails,becuase it did not return the expected
 //    Then we change the logic of function
-func Hello(name string) string{
+func Hello(name string, language string) string{
 	if name == ""{
 		name = "World"
 	}
+
+	if language == "spanish"{
+		return "Hola, " + name
+	}
+
 	return englishHelloPrefix + name
 }
 
 func main(){
-	fmt.Println(Hello("Lakshay"))
+	fmt.Println(Hello("Lakshay", ""))
 }

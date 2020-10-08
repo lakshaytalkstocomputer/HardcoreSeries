@@ -28,15 +28,23 @@ func TestHello(t *testing.T){
 
 	// We can define the requirement as one sub test
 	t.Run("saying hello to people", func(t *testing.T){
-		got := Hello("Lakshay")
+		got := Hello("Lakshay", "")
 		want := "Hello, Lakshay"
 		assertCorrectMessage(t, got, want)
 	})
 
 	// We define other requirement as other subtest
 	t.Run("empty string defaults to 'world'", func(t *testing.T) {
-		got := Hello("")
+		got := Hello("", "")
 		want := "Hello, World"
+		assertCorrectMessage(t, got, want)
+	})
+
+	// We  now need to support a second parameter, specifying the language of a greeting.
+	//  If a language that we do not need recognise, just default to english
+	t.Run("in spanish", func(t *testing.T) {
+		got := Hello("Lakshay", "spanish")
+		want:= "Hola, Lakshay"
 		assertCorrectMessage(t, got, want)
 	})
 }
