@@ -42,13 +42,15 @@ const french ="french"
 const englishHelloPrefix = "Hello, "
 const spanishHelloPrefix = "Hola, "
 const frenchHelloPrefix  = "Bonjour, "
+
 // We write this function by listening to compiler
-//  On First run, it tells that it did not find any function named Hello2()
-//    Then we define a function named Hello2()
+//  On First run, it tells that it did not find any function named Hello()
+//    Then we define a function named Hello()
 //  On Second run, it tells us that Hello should have an argument of type string
 //    Then we change the function to accept string and return string
-//  On third run, it tells us that the test that runs Hello2 fails,becuase it did not return the expected
+//  On third run, it tells us that the test that runs Hello fails,because it did not return the expected
 //    Then we change the logic of function
+
 func Hello(name string, language string) string{
 	if name == ""{
 		name = "World"
