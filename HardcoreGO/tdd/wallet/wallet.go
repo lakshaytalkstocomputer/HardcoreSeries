@@ -1,5 +1,6 @@
 package wallet
 
+import "errors"
 
 type Wallet struct{
 	balance float64
@@ -7,6 +8,14 @@ type Wallet struct{
 
 func (w *Wallet) Deposit(amount float64) error{
 	w.balance += amount
+	return nil
+}
+
+func (w *Wallet) Withdraw(amount float64) error{
+	if amount > w.balance{
+		return errors.New("error, funds in wallet is less than amount specified")
+	}
+	w.balance -= amount
 	return nil
 }
 

@@ -1,6 +1,8 @@
 package wallet
 
-import "testing"
+import (
+	"testing"
+)
 
 
 func TestWallet(t *testing.T){
@@ -24,6 +26,30 @@ func TestWallet(t *testing.T){
 
 		if got != expected{
 			t.Errorf("got %f expected %f",got, expected)
+		}
+
+	})
+
+
+	t.Run("Withdraw Money", func(t *testing.T){
+		err := wallet.Withdraw(5)
+		if err != nil {
+			t.Errorf("Found error while withdrawing")
+		}
+
+		got := wallet.Balance()
+		expected := 5.0
+
+		if got != expected{
+			t.Errorf("got %f expected %f", got, expected)
+		}
+	})
+
+	t.Run("Withdraw Money more than it is in Balance", func(t *testing.T) {
+		err := wallet.Withdraw(100.0)
+
+		if err == nil{
+			t.Errorf("Error should not be null")
 		}
 
 	})
