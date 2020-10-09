@@ -16,7 +16,8 @@ func SumAll(slices ...[]int) []int{
 	}
 	return result
 }
-
+// Calculate sum of tail of each slice adn store it in result
+//  We define tail as all the elements without the first element
 func SumAllTail(slices ...[]int)[]int{
 	var result []int
 
