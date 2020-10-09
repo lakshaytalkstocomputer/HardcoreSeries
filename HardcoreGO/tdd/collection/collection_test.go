@@ -61,3 +61,14 @@ func TestSumAll(t *testing.T){
 	})
 
 }
+
+func TestSumAllTail(t *testing.T){
+	t.Run("sum of tails of two slices", func(t *testing.T) {
+		got 		:= SumAllTail([]int{1,2,2}, []int{2,3,3})
+		expected	:= []int{4,6}
+
+		if !reflect.DeepEqual(got, expected){
+			t.Errorf("got %v expected %v", got, expected)
+		}
+	})
+}

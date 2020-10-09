@@ -16,3 +16,14 @@ func SumAll(slices ...[]int) []int{
 	}
 	return result
 }
+
+func SumAllTail(slices ...[]int)[]int{
+	var result []int
+
+	for _,s := range slices{
+		tail := s[1:]
+		result = append(result, ArraySum(tail))
+	}
+
+	return result
+}
