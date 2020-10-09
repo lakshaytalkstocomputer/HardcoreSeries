@@ -1,6 +1,9 @@
 package collection
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
 func TestArraySum(t *testing.T){
 	t.Run("sum of array with 5 elements", func(t *testing.T) {
@@ -32,4 +35,29 @@ func TestArraySum(t *testing.T){
 			t.Errorf("Expected %d but got %d, give %v", expected, got, numbers)
 		}
 	})
+}
+
+func TestSumAll(t *testing.T){
+	t.Run("sum of two slices", func(t *testing.T) {
+		got := SumAll([]int{1,1}, []int{1,1,1,1})
+		expected := []int{2, 4}
+
+		// Below code is not type as DeepEqual does not care about type
+		//  but it will return false if types are not equal
+		if !reflect.DeepEqual(got, expected){
+			t.Errorf("got %v expected %v", got, expected)
+		}
+	})
+
+	t.Run("sum of 5 slices", func(t *testing.T) {
+		got := SumAll([]int{1,1}, []int{1,1,1,1}, []int{1,1,1}, []int{1,1,1,1,1}, []int{1})
+		expected := []int{2, 4, 3, 5, 1}
+
+		// Below code is not type as DeepEqual does not care about type
+		//  but it will return false if types are not equal
+		if !reflect.DeepEqual(got, expected){
+			t.Errorf("got %v expected %v", got, expected)
+		}
+	})
+
 }
