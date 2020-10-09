@@ -23,3 +23,11 @@ func TestRepeater(t *testing.T){
 		checkerFunc(t, expected, got)
 	})
 }
+
+// This function will benchmark the function
+// * Use go test -bench=. to run benchmarking
+func BenchmarkRepeat(b *testing.B) {
+	for i := 0; i<b.N; i++{
+		Repeat("a")
+	}
+}
