@@ -21,9 +21,20 @@ func SumAll(slices ...[]int) []int{
 func SumAllTail(slices ...[]int)[]int{
 	var result []int
 
+	// We need to check whether slice is empty or not
+	//  if empty then append zero
 	for _,s := range slices{
-		tail := s[1:]
-		result = append(result, ArraySum(tail))
+
+		if len(s) == 0{
+
+			result = append(result, 0)
+
+		} else{
+
+			tail := s[1:]
+			result = append(result, ArraySum(tail))
+
+		}
 	}
 
 	return result

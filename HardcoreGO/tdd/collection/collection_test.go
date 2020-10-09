@@ -63,12 +63,28 @@ func TestSumAll(t *testing.T){
 }
 
 func TestSumAllTail(t *testing.T){
+
+	// This function adds Type safety
+	//   that is ignored by reflect.DeepEqual() in want parameter
+	checkSums := func(t *testing.T, got, want []int){
+		t.Helper()
+
+		if !reflect.DeepEqual(got, want){
+			t.Errorf("got %v want %v", got, want)
+		}
+	}
+
 	t.Run("sum of tails of two slices", func(t *testing.T) {
 		got 		:= SumAllTail([]int{1,2,2}, []int{2,3,3})
 		expected	:= []int{4,6}
 
-		if !reflect.DeepEqual(got, expected){
-			t.Errorf("got %v expected %v", got, expected)
-		}
+		checkSums(t, got, expected)
+	})
+
+	t.Run("sum of tails of empty and full slice", func(t *testing.T) {
+		got 		:= SumAllTail([]int{}, []int{2,3,3})
+		expected	:= []int{0,6}
+
+		checkSums(t, got, expected)
 	})
 }
