@@ -3,7 +3,9 @@ package geometry
 import "testing"
 
 func TestPerimeter(t *testing.T){
-	got 		:= Perimeter(10.0, 10.0)
+
+	rect 		:= Rectangle{10.0, 10.0}
+	got 		:= Perimeter(rect)
 	expected 	:= 40.0
 
 	if got != expected{
@@ -14,7 +16,8 @@ func TestPerimeter(t *testing.T){
 
 
 func TestArea(t *testing.T){
-	got			:= Area(10.0, 10.0)
+	rect 		:= Rectangle{10.0, 10.0}
+	got 		:= Area(rect)
 	expected	:= 100.0
 
 	if got != expected{
