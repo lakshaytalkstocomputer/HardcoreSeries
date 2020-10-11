@@ -2,6 +2,7 @@ package mocking
 
 import (
 	"bytes"
+	"reflect"
 	"testing"
 )
 
@@ -12,6 +13,26 @@ type SpySleeper struct {
 func (s *SpySleeper) Sleep(){
 	s.Calls++
 }
+
+
+const write = "write"
+const sleep = "sleep"
+
+type CountdownOperationsSpy struct{
+	Calls []string
+}
+
+func(c *CountdownOperationsSpy) Sleep(){
+	c.Calls = append(c.Calls, sleep)
+}
+
+func(c *CountdownOperationsSpy)Write(p []byte)(n int, err error){
+	c.Calls = append(c.Calls, write)
+
+	return
+}
+
+
 
 func TestCountdown(t *testing.T){
 
@@ -44,4 +65,24 @@ Go!
 
 	})
 
+	t.Run("check oreder of operations", func(t *testing.T) {
+		spySleepPrinter := &CountdownOperationsSpy{}
+
+		Countdown(spySleepPrinter, spySleepPrinter)
+
+		want := []string{
+			sleep,
+			write,
+			sleep,
+			write,
+			sleep,
+			write,
+			sleep,
+			write,
+		}
+
+		if !reflect.DeepEqual(want, spySleepPrinter.Calls){
+			t.Errorf("wanted calls %v, got %v", want, spySleepPrinter.Calls)
+		}
+	})
 }
