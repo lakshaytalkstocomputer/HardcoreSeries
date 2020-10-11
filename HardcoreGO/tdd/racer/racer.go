@@ -1,15 +1,28 @@
 package racer
 
 import (
+	"fmt"
 	"net/http"
+	"time"
 )
 
-func Racer(firstUrl string, secondUrl string) (fastUrl string){
+const tenSecondTimeout = 10 * time.Second
+
+func Racer(firstUrl string, secondUrl string) (fastUrl string, err error){
+	return ConfigurableRacer(firstUrl, secondUrl, tenSecondTimeout)
+}
+
+func ConfigurableRacer(firstUrl, secondUrl string, timeout time.Duration)(winner string, err error){
 	select {
+
 		case <- ping(firstUrl):
-			return firstUrl
+			return firstUrl, nil
+
 		case <- ping(secondUrl):
-			return secondUrl
+			return secondUrl, nil
+
+		case <- time.After(timeout):
+			return "", fmt.Errorf("timed out waiting for %s and %s", firstUrl, secondUrl)
 	}
 }
 
