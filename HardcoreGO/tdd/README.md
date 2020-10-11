@@ -40,3 +40,6 @@ to pass an array of length 5 only.
 ## Mocking
 * *Spies* are a kind of mock which can record how a dependency is used. They can reocrd the arguments
 sent in , how many it has been called, etc.
+
+## Concurrency
+* *Concurrency* means 'having more than one thing in progress'
