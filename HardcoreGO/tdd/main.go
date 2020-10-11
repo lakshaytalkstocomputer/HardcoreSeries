@@ -13,6 +13,6 @@ func main(){
 	//injection.Greet(os.Stdout, "Lakshay")
 	//http.ListenAndServe(":5000", http.HandlerFunc(MyGreetHandler))
 
-	mocking.Countdown(os.Stdout)
+	mocking.Countdown(os.Stdout, &mocking.DefaultSleeper{})
 
 }

@@ -36,3 +36,7 @@ to pass an array of length 5 only.
  someone's day because our other test will not compile!
 
     * Create a new function
+   
+## Mocking
+* *Spies* are a kind of mock which can record how a dependency is used. They can reocrd the arguments
+sent in , how many it has been called, etc.

@@ -6,13 +6,25 @@ import (
 	"time"
 )
 
-func Countdown(buffer io.Writer){
+type Sleeper interface{
+	Sleep()
+}
+
+type DefaultSleeper struct {
+
+}
+
+func (d *DefaultSleeper)Sleep(){
+	time.Sleep(1 * time.Second)
+}
+
+func Countdown(buffer io.Writer, sleeper Sleeper){
 
 	for i := 3; i>0; i-- {
-		time.Sleep( 1 * time.Second)
+		sleeper.Sleep()
 		fmt.Fprintln(buffer, i)
 	}
-	time.Sleep( 1 * time.Second)
+	sleeper.Sleep()
 	fmt.Fprintln(buffer, "Go!")
 
 
