@@ -55,6 +55,26 @@ func TestWalk(t *testing.T){
 			},
 			[]string{"Lakshay", "London"},
 		},
+		{
+			"Pointer to Struct with another struct within - Nested Structs",
+			&struct {
+				Name    string
+				Profile struct {
+					Age  int
+					City string
+				}
+			}{
+				"Lakshay",
+				struct {
+					Age	int
+					City string
+				}{
+					33,
+					"London",
+				},
+			},
+			[]string{"Lakshay", "London"},
+		},
 
 	}
 
