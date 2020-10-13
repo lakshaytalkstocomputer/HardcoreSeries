@@ -92,8 +92,21 @@ func TestWalk(t *testing.T){
 			},
 			[]string{"London", "Chandigarh"},
 		},
-
-
+		{
+			"Arrays",
+			[2]struct{
+				Age int
+				City string
+			}{
+				{
+					33, "Chand",
+				},
+				{
+					44, "Banglore",
+				},
+			},
+			[]string{"Chand","Banglore"},
+		},
 	}
 
 	for _, test := range cases {
