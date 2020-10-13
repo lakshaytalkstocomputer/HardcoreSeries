@@ -25,6 +25,15 @@ func Walk(x interface{}, fn func(input string) ){
 		for i:=0; i<val.Len(); i++{
 			walkValue(val.Index(i))
 		}
+	case reflect.Chan:
+		for v, ok := val.Recv(); ok; v, ok = val.Recv(){
+			Walk(v.Interface(), fn)
+		}
+	case reflect.Func:
+		valFnResult := val.Call(nil)
+		for _, res := range valFnResult{
+			Walk(res.Interface(), fn)
+		}
 	}
 
 }
