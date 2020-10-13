@@ -35,6 +35,26 @@ func TestWalk(t *testing.T){
 			}{"lakshay", 24},
 			[]string{"lakshay"},
 		},
+		{
+			"Struct with another struct within - Nested Structs",
+			struct {
+				Name    string
+				Profile struct {
+					Age  int
+					City string
+				}
+			}{
+					"Lakshay",
+					struct {
+						Age	int
+						City string
+					}{
+						33,
+						"London",
+					},
+			},
+			[]string{"Lakshay", "London"},
+		},
 
 	}
 
