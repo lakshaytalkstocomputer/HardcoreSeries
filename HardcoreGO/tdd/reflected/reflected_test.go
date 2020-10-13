@@ -27,6 +27,14 @@ func TestWalk(t *testing.T){
 			}{"Chris", "London"},
 			[]string{"Chris", "London"},
 		},
+		{
+			"Strruct with non string field",
+			struct {
+				Name string
+				Age int
+			}{"lakshay", 24},
+			[]string{"lakshay"},
+		},
 
 	}
 
