@@ -8,13 +8,13 @@ func Walk(x interface{}, fn func(input string) ){
 	for i := 0; i < val.NumField(); i++{
 		field := val.Field(i)
 
-		if field.Kind() == reflect.String{
-			fn(field.String())
+		switch field.Kind() {
+			case reflect.String:
+				fn(field.String())
+			case reflect.Struct:
+				Walk(field.Interface(), fn)
 		}
 
-		if field.Kind() == reflect.Struct{
-			Walk(field.Interface(), fn)
-		}
 	}
 
 }
