@@ -10,6 +10,28 @@ import "strings"
 // Key skill for software developers is to try and identify "thin vertical slices"
 //   and then iterating. the TDD workflow helps facilitate iterative development.
 
+type RomanNumeral struct{
+	Value int
+	Symbol string
+}
+
+var allRomanNumerals = []RomanNumeral{
+	{1000, "M"},
+	{900, "CM"},
+	{500, "D"},
+	{400, "CD"},
+	{100, "C"},
+	{90, "XC"},
+	{50, "L"},
+	{40, "XL"},
+	{10, "X"},
+	{9, "IX"},
+	{5, "V"},
+	{4, "IV"},
+	{1, "I"},
+}
+
+
 // This function converts Arabic Number to Roman Number
 //   Romans believed in DRY too,
 //   They thought repeating characters would become hard to read and
@@ -21,25 +43,13 @@ import "strings"
 func ConvertToRoman(number int) string{
 	var output strings.Builder
 
-	for number > 0 {
-		switch {
-		case number > 9:
-			output.WriteString("X")
-			number -= 10
-		case number > 8:
-			output.WriteString("IX")
-			number -= 9
-		case number > 4:
-			output.WriteString("V")
-			number -= 5
-		case number > 3:
-			output.WriteString("IV")
-			number -= 4
-		default:
-			output.WriteString("I")
-			number--
+	for _, numeral := range allRomanNumerals{
+		for number >= numeral.Value{
+			output.WriteString(numeral.Symbol)
+			number -= numeral.Value
 		}
 	}
+
 	return output.String()
 }
 
