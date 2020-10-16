@@ -3,6 +3,7 @@ package roman
 import (
 	"fmt"
 	"testing"
+	"testing/quick"
 )
 
 // Use the uneasy feeling to write a new test to force us to write slightly less dumb code.
@@ -10,7 +11,7 @@ import (
 // Create table test with the test cases
 var tt = []struct{
 			Description string
-			Arabic 		int
+			Arabic 		uint16
 			Expected 	string
 			}{
 				{"1 to I", 1, "I"},
@@ -39,7 +40,7 @@ func TestRomanNumber(t *testing.T){
 	for _, testData := range tt{
 		t.Run(testData.Description, func(t *testing.T) {
 
-			var got	string	 = ConvertToRoman(testData.Arabic)
+			var got	string	 = ConvertToRoman(uint16(testData.Arabic))
 
 			if got != testData.Expected{
 				t.Errorf("got %v, expected %v", got, testData.Expected)
@@ -50,12 +51,30 @@ func TestRomanNumber(t *testing.T){
 }
 
 func TestRomanToArabic(t *testing.T){
-	for _, test := range tt[:1]{
+	for _, test := range tt{
 		t.Run(fmt.Sprintf("%q gets converted to %d", test.Expected, test.Arabic), func(t *testing.T) {
 			got := ConvertToArabic(test.Expected)
 			if got != test.Arabic {
 				t.Errorf("got %d, want %d", got, test.Arabic)
 			}
 		})
+	}
+}
+
+func TestPropertiesOfConversion(t *testing.T) {
+	assertion := func(arabic uint16) bool {
+		if arabic > 3999 {
+			return true
+		}
+		t.Log("testing", arabic)
+		roman := ConvertToRoman(arabic)
+		fromRoman := ConvertToArabic(roman)
+		return fromRoman == arabic
+	}
+
+	if err := quick.Check(assertion, &quick.Config{
+		MaxCount:1000,
+	}); err != nil {
+		t.Error("failed checks", err)
 	}
 }

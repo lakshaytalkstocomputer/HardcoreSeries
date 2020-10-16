@@ -11,11 +11,62 @@ import "strings"
 //   and then iterating. the TDD workflow helps facilitate iterative development.
 
 type RomanNumeral struct{
-	Value int
+	Value uint16
 	Symbol string
 }
+type Numerals []RomanNumeral
 
-var allRomanNumerals = []RomanNumeral{
+func (n Numerals) ValueOf(symbols ...byte) uint16{
+	symbol := string(symbols)
+	for _, s := range n{
+		if s.Symbol == symbol {
+			return s.Value
+		}
+	}
+
+	return 0
+}
+
+
+func ConvertToRoman(number uint16) string {
+	var output strings.Builder
+
+	for _, numeral := range allRomanNumerals{
+		for number >= numeral.Value{
+			output.WriteString(numeral.Symbol)
+			number -= numeral.Value
+		}
+	}
+
+	return output.String()
+}
+
+func ConvertToArabic(roman string) uint16 {
+	var total uint16 = 0
+
+	for i := 0; i < len(roman); i++ {
+		symbol := roman[i]
+
+		if couldBeSubtractive(i, symbol, roman) {
+			if value := allRomanNumerals.ValueOf(symbol, roman[i+1]); value != 0 {
+				total += value
+				i++ // move past this character too for the next loop
+			} else {
+				total += allRomanNumerals.ValueOf(symbol)
+			}
+		} else {
+			total+=allRomanNumerals.ValueOf(symbol)
+		}
+	}
+	return total
+}
+
+func couldBeSubtractive(index int, currentSymbol uint8, roman string) bool {
+	isSubtractiveSymbol := currentSymbol == 'I' || currentSymbol == 'X' || currentSymbol =='C'
+	return index+1 < len(roman) && isSubtractiveSymbol
+}
+
+var allRomanNumerals = Numerals{
 	{1000, "M"},
 	{900, "CM"},
 	{500, "D"},
@@ -31,7 +82,6 @@ var allRomanNumerals = []RomanNumeral{
 	{1, "I"},
 }
 
-
 // This function converts Arabic Number to Roman Number
 //   Romans believed in DRY too,
 //   They thought repeating characters would become hard to read and
@@ -40,19 +90,3 @@ var allRomanNumerals = []RomanNumeral{
 //   Instead you take the next highest symbol and then "subtract" by putting a
 //   symbol to left of it.
 //   Not all symbols can be used as subtractors only 1 (I), X(10), C(100)
-func ConvertToRoman(number int) string{
-	var output strings.Builder
-
-	for _, numeral := range allRomanNumerals{
-		for number >= numeral.Value{
-			output.WriteString(numeral.Symbol)
-			number -= numeral.Value
-		}
-	}
-
-	return output.String()
-}
-
-func ConvertToArabic(roman string) (output int) {
-	return 1
-}
