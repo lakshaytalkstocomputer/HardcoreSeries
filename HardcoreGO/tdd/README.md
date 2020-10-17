@@ -36,3 +36,21 @@ to pass an array of length 5 only.
  someone's day because our other test will not compile!
 
     * Create a new function
+   
+## Mocking
+* *Spies* are a kind of mock which can record how a dependency is used. They can reocrd the arguments
+sent in , how many it has been called, etc.
+
+## Concurrency
+* *Concurrency* means 'having more than one thing in progress'
+
+## Reflection
+* Reflection in computing is the ability of a program to examine its own structure, particularly
+through types; it's a form of metaprogramming. It's also a great source of confusion.
+
+## Context
+* Incoming request to a server should create a Context, and outgoing calls to server
+should accept a Context. the chain of functions calls between them, must propogate the 
+Context, optionally replacing it with derived Context created using WithCancelm, WithDeadline, WithDeadline, or WithValue.
+When a Context is cancelled, all Contexts are derived from it are also
+canceled.
