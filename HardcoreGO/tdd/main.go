@@ -1,19 +1,25 @@
 package main
 
-import (
-	"github.com/lakshaytalkstocomputer/HardcoreSeries/HardcoreGO/tdd/mocking"
-	"os"
-	"time"
-)
-
 //func MyGreetHandler(w http.ResponseWriter, r *http.Request){
 //	injection.Greet(w, "world")
 //}
+
+import (
+	"github.com/lakshaytalkstocomputer/HardcoreSeries/HardcoreGO/tdd/httpserver"
+	"log"
+	"net/http"
+)
 
 func main(){
 	//injection.Greet(os.Stdout, "Lakshay")
 	//http.ListenAndServe(":5000", http.HandlerFunc(MyGreetHandler))
 
-	mocking.Countdown(os.Stdout, &mocking.ConfigurableSleeper{1* time.Second, time.Sleep})
+	//mocking.Countdown(os.Stdout, &mocking.ConfigurableSleeper{1* time.Second, time.Sleep})
+
+	handler := http.HandlerFunc(httpserver.PlayerServer)
+
+	if err := http.ListenAndServe(":5000", handler); err != nil{
+		log.Fatalf("could not listen on port 5000 %v", err)
+	}
 
 }
