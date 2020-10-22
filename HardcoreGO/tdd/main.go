@@ -10,18 +10,6 @@ import (
 	"net/http"
 )
 
-type InMemoryPlayerStore struct{
-
-}
-
-func (i *InMemoryPlayerStore) GetPlayerScore(name string) int {
-	return 123
-}
-
-
-func (i *InMemoryPlayerStore) RecordWin(name string) {
-}
-
 
 func main(){
 	//injection.Greet(os.Stdout, "Lakshay")
@@ -29,7 +17,7 @@ func main(){
 
 	//mocking.Countdown(os.Stdout, &mocking.ConfigurableSleeper{1* time.Second, time.Sleep})
 
-	server := &httpserver.PlayerServer{&InMemoryPlayerStore{}}
+	server := &httpserver.PlayerServer{httpserver.NewInMemoryStore()}
 
 	if err := http.ListenAndServe(":5000", server); err != nil{
 		log.Fatalf("could not listen on port 5000 %v", err)
