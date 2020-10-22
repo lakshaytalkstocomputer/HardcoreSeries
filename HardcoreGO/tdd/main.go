@@ -19,6 +19,10 @@ func (i *InMemoryPlayerStore) GetPlayerScore(name string) int {
 }
 
 
+func (i *InMemoryPlayerStore) RecordWin(name string) {
+}
+
+
 func main(){
 	//injection.Greet(os.Stdout, "Lakshay")
 	//http.ListenAndServe(":5000", http.HandlerFunc(MyGreetHandler))
