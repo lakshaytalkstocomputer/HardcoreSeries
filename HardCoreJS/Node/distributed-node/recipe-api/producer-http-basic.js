@@ -4,7 +4,7 @@ const PORT   = process.env.PORT || 4000;
 
 console.log(`worker pid=${process.pid}`);
 
-server.get('/recipe/:id', async(req, reply) => {
+server.get('/recipes/:id', async(req, reply) => {
     console.log(`worker request pid=${process.pid}`);
     const id = Number(req.params.id);
 
