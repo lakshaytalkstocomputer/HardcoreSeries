@@ -12,4 +12,3 @@ Distributed Node JS Applications
 * When referring to the realtionship between web-browser and web-api :
     - the web browser is called the client/consumer,
     - the web-api server is called the server/producer.
-* 
