@@ -2,3 +2,4 @@
 target/
 books/
 package-lock.json
+venv
