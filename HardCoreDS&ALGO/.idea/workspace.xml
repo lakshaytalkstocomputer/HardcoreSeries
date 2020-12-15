@@ -102,7 +102,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
-  <component name="RunManager" selected="Python.attempt-1">
+  <component name="RunManager" selected="Python.removingSaveElementInPlace">
     <configuration name="attempt-1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="HardCoreDS" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -117,6 +117,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Learning/Arrays/EvenNumberOfDigit/attempt-1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="attempt-2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="HardCoreDS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Learning/Arrays/SquaresOfSortedArray" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Learning/Arrays/SquaresOfSortedArray/attempt-2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -147,8 +169,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="removingSaveElementInPlace" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="HardCoreDS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Learning/Arrays/DeletingAnElement" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Learning/Arrays/DeletingAnElement/removingSaveElementInPlace.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.removingSaveElementInPlace" />
+        <item itemvalue="Python.attempt-2" />
         <item itemvalue="Python.attempt-1" />
         <item itemvalue="Python.maxConsecutiveOne-2" />
       </list>
@@ -166,6 +212,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585431751094</updated>
       <workItem from="1607813758649" duration="6420000" />
+      <workItem from="1608064459926" duration="3191000" />
     </task>
     <servers />
   </component>
@@ -182,40 +229,41 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2442" height="484" key="GridCell.Tab.0.bottom" timestamp="1607820058785">
+    <state width="1198" height="484" key="GridCell.Tab.0.bottom" timestamp="1608066939321">
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
-    <state width="2442" height="484" key="GridCell.Tab.0.bottom/72.27.2488.1413@72.27.2488.1413" timestamp="1607820058785" />
-    <state width="2442" height="484" key="GridCell.Tab.0.center" timestamp="1607820058785">
+    <state width="1198" height="484" key="GridCell.Tab.0.bottom/72.27.2488.1413@72.27.2488.1413" timestamp="1608066939321" />
+    <state width="1198" height="484" key="GridCell.Tab.0.center" timestamp="1608066939321">
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
-    <state width="2442" height="484" key="GridCell.Tab.0.center/72.27.2488.1413@72.27.2488.1413" timestamp="1607820058785" />
-    <state width="2442" height="484" key="GridCell.Tab.0.left" timestamp="1607820058784">
+    <state width="1198" height="484" key="GridCell.Tab.0.center/72.27.2488.1413@72.27.2488.1413" timestamp="1608066939321" />
+    <state width="1198" height="484" key="GridCell.Tab.0.left" timestamp="1608066939321">
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
-    <state width="2442" height="484" key="GridCell.Tab.0.left/72.27.2488.1413@72.27.2488.1413" timestamp="1607820058784" />
-    <state width="2442" height="484" key="GridCell.Tab.0.right" timestamp="1607820058785">
+    <state width="1198" height="484" key="GridCell.Tab.0.left/72.27.2488.1413@72.27.2488.1413" timestamp="1608066939321" />
+    <state width="1198" height="484" key="GridCell.Tab.0.right" timestamp="1608066939321">
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
-    <state width="2442" height="484" key="GridCell.Tab.0.right/72.27.2488.1413@72.27.2488.1413" timestamp="1607820058785" />
-    <state width="2442" height="484" key="GridCell.Tab.1.bottom" timestamp="1607820058785">
+    <state width="1198" height="484" key="GridCell.Tab.0.right/72.27.2488.1413@72.27.2488.1413" timestamp="1608066939321" />
+    <state width="1198" height="484" key="GridCell.Tab.1.bottom" timestamp="1608066939322">
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
-    <state width="2442" height="484" key="GridCell.Tab.1.bottom/72.27.2488.1413@72.27.2488.1413" timestamp="1607820058785" />
-    <state width="2442" height="484" key="GridCell.Tab.1.center" timestamp="1607820058785">
+    <state width="1198" height="484" key="GridCell.Tab.1.bottom/72.27.2488.1413@72.27.2488.1413" timestamp="1608066939322" />
+    <state width="1198" height="484" key="GridCell.Tab.1.center" timestamp="1608066939322">
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
-    <state width="2442" height="484" key="GridCell.Tab.1.center/72.27.2488.1413@72.27.2488.1413" timestamp="1607820058785" />
-    <state width="2442" height="484" key="GridCell.Tab.1.left" timestamp="1607820058785">
+    <state width="1198" height="484" key="GridCell.Tab.1.center/72.27.2488.1413@72.27.2488.1413" timestamp="1608066939322" />
+    <state width="1198" height="484" key="GridCell.Tab.1.left" timestamp="1608066939322">
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
-    <state width="2442" height="484" key="GridCell.Tab.1.left/72.27.2488.1413@72.27.2488.1413" timestamp="1607820058785" />
-    <state width="2442" height="484" key="GridCell.Tab.1.right" timestamp="1607820058785">
+    <state width="1198" height="484" key="GridCell.Tab.1.left/72.27.2488.1413@72.27.2488.1413" timestamp="1608066939322" />
+    <state width="1198" height="484" key="GridCell.Tab.1.right" timestamp="1608066939322">
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
-    <state width="2442" height="484" key="GridCell.Tab.1.right/72.27.2488.1413@72.27.2488.1413" timestamp="1607820058785" />
+    <state width="1198" height="484" key="GridCell.Tab.1.right/72.27.2488.1413@72.27.2488.1413" timestamp="1608066939322" />
     <state x="1427" y="368" width="1022" height="737" key="SettingsEditor" timestamp="1607813881296">
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
@@ -228,5 +276,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HardCoreDS_ALGO$maxConsecutiveOne_2.coverage" NAME="maxConsecutiveOne-2 Coverage Results" MODIFIED="1607815993852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Learning/Arrays/MaxConsecutiveOnes" />
     <SUITE FILE_PATH="coverage/HardCoreDS_ALGO$attempt_1.coverage" NAME="attempt-1 Coverage Results" MODIFIED="1607819714129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Learning/Arrays/EvenNumberOfDigit" />
+    <SUITE FILE_PATH="coverage/HardCoreDS_ALGO$removingSaveElementInPlace.coverage" NAME="removingSaveElementInPlace Coverage Results" MODIFIED="1608066787400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Learning/Arrays/DeletingAnElement" />
   </component>
 </project>
