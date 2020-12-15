@@ -72,6 +72,7 @@
   <component name="ChangeListManager">
     <list default="true" id="deb6f470-9bad-433a-94d5-8ba4522ea5bf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning/Arrays/DeletingAnElement/removingSaveElementInPlace.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning/Arrays/DeletingAnElement/removingSameElementInPlace.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +103,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
-  <component name="RunManager" selected="Python.removingSaveElementInPlace">
+  <component name="RunManager" selected="Python.removingSameElementInPlace">
     <configuration name="attempt-1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="HardCoreDS" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -169,7 +170,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="removingSaveElementInPlace" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="removingSameElementInPlace" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="HardCoreDS" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -182,7 +183,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Learning/Arrays/DeletingAnElement/removingSaveElementInPlace.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Learning/Arrays/DeletingAnElement/removingSameElementInPlace.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -193,7 +194,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.removingSaveElementInPlace" />
+        <item itemvalue="Python.removingSameElementInPlace" />
         <item itemvalue="Python.attempt-2" />
         <item itemvalue="Python.attempt-1" />
         <item itemvalue="Python.maxConsecutiveOne-2" />
@@ -212,7 +213,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585431751094</updated>
       <workItem from="1607813758649" duration="6420000" />
-      <workItem from="1608064459926" duration="3191000" />
+      <workItem from="1608064459926" duration="6300000" />
     </task>
     <servers />
   </component>
