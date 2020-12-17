@@ -72,7 +72,6 @@
   <component name="ChangeListManager">
     <list default="true" id="deb6f470-9bad-433a-94d5-8ba4522ea5bf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Learning/Arrays/DeletingAnElement/removingSaveElementInPlace.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning/Arrays/DeletingAnElement/removingSameElementInPlace.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +102,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
-  <component name="RunManager" selected="Python.removingSameElementInPlace">
+  <component name="RunManager" selected="Python.searchingDoubleNumber">
     <configuration name="attempt-1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="HardCoreDS" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -148,7 +147,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="maxConsecutiveOne-2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="removeDuplicateInSortedArray" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="HardCoreDS" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -156,12 +155,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Learning/Arrays/MaxConsecutiveOnes" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Learning/Arrays/DeletingAnElement" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Learning/Arrays/MaxConsecutiveOnes/maxConsecutiveOne-2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Learning/Arrays/DeletingAnElement/removeDuplicateInSortedArray.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -192,12 +191,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="searchingDoubleNumber" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="HardCoreDS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Learning/Arrays/Searching" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Learning/Arrays/Searching/searchingDoubleNumber.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.searchingDoubleNumber" />
+        <item itemvalue="Python.removeDuplicateInSortedArray" />
         <item itemvalue="Python.removingSameElementInPlace" />
         <item itemvalue="Python.attempt-2" />
         <item itemvalue="Python.attempt-1" />
-        <item itemvalue="Python.maxConsecutiveOne-2" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +235,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585431751094</updated>
       <workItem from="1607813758649" duration="6420000" />
-      <workItem from="1608064459926" duration="6300000" />
+      <workItem from="1608064459926" duration="7461000" />
     </task>
     <servers />
   </component>
@@ -233,38 +255,38 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1198" height="484" key="GridCell.Tab.0.bottom" timestamp="1608066939321">
+    <state width="1198" height="484" key="GridCell.Tab.0.bottom" timestamp="1608166401020">
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
-    <state width="1198" height="484" key="GridCell.Tab.0.bottom/72.27.2488.1413@72.27.2488.1413" timestamp="1608066939321" />
-    <state width="1198" height="484" key="GridCell.Tab.0.center" timestamp="1608066939321">
+    <state width="1198" height="484" key="GridCell.Tab.0.bottom/72.27.2488.1413@72.27.2488.1413" timestamp="1608166401020" />
+    <state width="1198" height="484" key="GridCell.Tab.0.center" timestamp="1608166401020">
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
-    <state width="1198" height="484" key="GridCell.Tab.0.center/72.27.2488.1413@72.27.2488.1413" timestamp="1608066939321" />
-    <state width="1198" height="484" key="GridCell.Tab.0.left" timestamp="1608066939321">
+    <state width="1198" height="484" key="GridCell.Tab.0.center/72.27.2488.1413@72.27.2488.1413" timestamp="1608166401020" />
+    <state width="1198" height="484" key="GridCell.Tab.0.left" timestamp="1608166401019">
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
-    <state width="1198" height="484" key="GridCell.Tab.0.left/72.27.2488.1413@72.27.2488.1413" timestamp="1608066939321" />
-    <state width="1198" height="484" key="GridCell.Tab.0.right" timestamp="1608066939321">
+    <state width="1198" height="484" key="GridCell.Tab.0.left/72.27.2488.1413@72.27.2488.1413" timestamp="1608166401019" />
+    <state width="1198" height="484" key="GridCell.Tab.0.right" timestamp="1608166401020">
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
-    <state width="1198" height="484" key="GridCell.Tab.0.right/72.27.2488.1413@72.27.2488.1413" timestamp="1608066939321" />
-    <state width="1198" height="484" key="GridCell.Tab.1.bottom" timestamp="1608066939322">
+    <state width="1198" height="484" key="GridCell.Tab.0.right/72.27.2488.1413@72.27.2488.1413" timestamp="1608166401020" />
+    <state width="1198" height="484" key="GridCell.Tab.1.bottom" timestamp="1608166401144">
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
-    <state width="1198" height="484" key="GridCell.Tab.1.bottom/72.27.2488.1413@72.27.2488.1413" timestamp="1608066939322" />
-    <state width="1198" height="484" key="GridCell.Tab.1.center" timestamp="1608066939322">
+    <state width="1198" height="484" key="GridCell.Tab.1.bottom/72.27.2488.1413@72.27.2488.1413" timestamp="1608166401144" />
+    <state width="1198" height="484" key="GridCell.Tab.1.center" timestamp="1608166401143">
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
-    <state width="1198" height="484" key="GridCell.Tab.1.center/72.27.2488.1413@72.27.2488.1413" timestamp="1608066939322" />
-    <state width="1198" height="484" key="GridCell.Tab.1.left" timestamp="1608066939322">
+    <state width="1198" height="484" key="GridCell.Tab.1.center/72.27.2488.1413@72.27.2488.1413" timestamp="1608166401143" />
+    <state width="1198" height="484" key="GridCell.Tab.1.left" timestamp="1608166401143">
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
-    <state width="1198" height="484" key="GridCell.Tab.1.left/72.27.2488.1413@72.27.2488.1413" timestamp="1608066939322" />
-    <state width="1198" height="484" key="GridCell.Tab.1.right" timestamp="1608066939322">
+    <state width="1198" height="484" key="GridCell.Tab.1.left/72.27.2488.1413@72.27.2488.1413" timestamp="1608166401143" />
+    <state width="1198" height="484" key="GridCell.Tab.1.right" timestamp="1608166401144">
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
-    <state width="1198" height="484" key="GridCell.Tab.1.right/72.27.2488.1413@72.27.2488.1413" timestamp="1608066939322" />
+    <state width="1198" height="484" key="GridCell.Tab.1.right/72.27.2488.1413@72.27.2488.1413" timestamp="1608166401144" />
     <state x="1427" y="368" width="1022" height="737" key="SettingsEditor" timestamp="1607813881296">
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
@@ -274,9 +296,22 @@
     </state>
     <state x="979" y="349" width="672" height="678" key="search.everywhere.popup/72.27.2488.1413@72.27.2488.1413" timestamp="1607814985867" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Learning/Arrays/Searching/searchingDoubleNumber.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/HardCoreDS_ALGO$removeDuplicateInSortedArray.coverage" NAME="removeDuplicateInSortedArray Coverage Results" MODIFIED="1608072238195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Learning/Arrays/DeletingAnElement" />
     <SUITE FILE_PATH="coverage/HardCoreDS_ALGO$maxConsecutiveOne_2.coverage" NAME="maxConsecutiveOne-2 Coverage Results" MODIFIED="1607815993852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Learning/Arrays/MaxConsecutiveOnes" />
     <SUITE FILE_PATH="coverage/HardCoreDS_ALGO$attempt_1.coverage" NAME="attempt-1 Coverage Results" MODIFIED="1607819714129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Learning/Arrays/EvenNumberOfDigit" />
+    <SUITE FILE_PATH="coverage/HardCoreDS_ALGO$searchingDoubleNumber.coverage" NAME="searchingDoubleNumber Coverage Results" MODIFIED="1608166400920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Learning/Arrays/Searching" />
     <SUITE FILE_PATH="coverage/HardCoreDS_ALGO$removingSaveElementInPlace.coverage" NAME="removingSaveElementInPlace Coverage Results" MODIFIED="1608066787400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Learning/Arrays/DeletingAnElement" />
   </component>
 </project>
