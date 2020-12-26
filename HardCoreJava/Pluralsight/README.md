@@ -114,8 +114,42 @@ Note : We can put line comment in block comment but not block comment in block c
         long some = 1212L;
         int someIntValue = (int) some;
         ```
-### Conditional Logic
+# 5. Conditional Logic
 * Relational Operators
 * Conditonal Assignment ``` condition ? true-value ? false-value```
 * if-else
 * if-else_if-else
+* Switch with break
+
+## Block Statement
+* Group together multiple statements.
+* Variable scope limited to that block.
+
+# 6. Looping and Arrays
+## Loops
+* for loop
+    * normal for loop
+        * `for( <intiliazation> ; <condition> ; <updator>) {}`
+    * for each
+        * `for(dataType loop-variable: array){}`
+* while loop
+* do-while loop
+
+## Arrays
+* Collection of elements of same type
+* zero based indexing
+* `.length` attribute for knowing the length.
+* Initialize array :
+    * Ways to intialize an array :
+        * Directly:
+            * `float[] someArray = { 0.01f, 0.02f}`
+            * Java will automatically set the length.
+        * Normal
+            ```
+            int[] someArr = new int[3];
+            someArr[0] =1;
+            someArr[1] =1;
+            someArr[2] =1;
+            ```           
+
+
