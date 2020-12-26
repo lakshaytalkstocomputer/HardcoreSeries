@@ -152,4 +152,54 @@ Note : We can put line comment in block comment but not block comment in block c
             someArr[2] =1;
             ```           
 
+# 7. Methods
+* Named Parameter List
+* Allows Empty Parameter List
+* Can return something or return void.
+* Variables are scoped to the method.
+* Parameters are passed as value.
+* Allows usage of empty return in which case the return type shoudl be void.
 
+
+# 8. Strings
+* String Class
+    * Stores a sequesnce of Unicode characters.
+    * Literals are stored in double quotes.
+    * Allows += operations.
+    * String objects are immutable.
+        * Variables hold the reference to the value.
+    * String Equality
+        * Use Equals method to check whether every character in two strings are same.
+        * Use == to check if two variables hodl same reference.
+    * Interning a string.
+        ```
+        String s1 ="I LOVE"
+        String s2 = "I"
+        s2 += " LOVE"
+        String s3 = s1.intern();
+        String s4 = s2.intern();
+
+        s1 == s2 (false)
+        s3 == s4 (true)
+        ```
+        * This provides a canonicalized value.
+        * Enables reliable == comparison.
+        * when an intern method is apllied to a string, java looks if a intern object of that string is created, if not it creates and gives the reference.
+* String Builder
+    * Need to extract strign from Stringbuilder Object
+    * Mutable Strings
+    * Automatic length adaptation.
+    ```
+    String location ="Florida";
+    int flightNumber = 175;
+    StringBuilder sb = new StringBuilder(40);
+
+    sb.append("I flew to");
+    sb.append(location);
+    sb.append(" on flight #);
+    sb.append(flightnumber);
+
+    String message = sb.toString();
+    ```
+    * Allows `indexOf`,`insertAt` methods. 
+    
