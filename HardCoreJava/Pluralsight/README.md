@@ -114,4 +114,8 @@ Note : We can put line comment in block comment but not block comment in block c
         long some = 1212L;
         int someIntValue = (int) some;
         ```
-    
+### Conditional Logic
+* Relational Operators
+* Conditonal Assignment ``` condition ? true-value ? false-value```
+* if-else
+* if-else_if-else
