@@ -21,5 +21,18 @@ public class Main {
         System.out.println("First Line from App");
         System.out.println("Second Line from App");
         System.out.println("Third line from App");
+
+
+
+        // Using Final Access Modifier
+        final int maxStudents = 25;
+        final int somevariable;
+
+        int someOtherVariable = 100;
+        somevariable = someOtherVariable;
+
+        System.out.println("SomeOther Variable: " +  somevariable);
+        System.out.println("maxStudent Variable: " +  maxStudents);
+
     }
 }
