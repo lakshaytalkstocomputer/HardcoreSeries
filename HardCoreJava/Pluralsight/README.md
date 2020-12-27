@@ -202,4 +202,128 @@ Note : We can put line comment in block comment but not block comment in block c
     String message = sb.toString();
     ```
     * Allows `indexOf`,`insertAt` methods. 
+
+# 9. Classes and Inheritence
+* Declaring Classes
+* Class Mmebers
+* Working with objects
+* Encapsulation and access modifiers
+* Field Accessors and mutators
+
+## a) Declaring Classes
+* Declared with Class Key Word followed by the class name.
+* Class Name should be Capital.
+* Body of class is contained within brackets.
+* Java source file name normallu has the name as class.
+
+### i) Class
+* A class is mad eup of state and executable code.
+* We use memeber to represent these. Following are the members:-
+    * Fields (Store object state)
+    * Methods (Executable code that manipulates state and perform operations)
+    * Constructors (Executable code used during object creation to set initial state)
     
+* Creating variable of type _MyClass_  will not create object but a place to hold reference.
+    * Actual object is created using _**new**_ keyword.
+* Classes are known as reference types.
+* WHen you create an array of __MyClass__ , you are not creating arrya of objects,
+you are creating an array which can hold refernce to four objects. You need to create those four objects specifically.
+```
+MyClass[] someVar = new MyClass[4];
+
+This creates an array which can hold refernce to 4 objects of type MyClass. Objects are not created yet.
+```
+
+## ii) Encapsulation and Access Modifiers
+* Different Access Modifiers are :-
+    * Private  ( only inside the class)
+    * Public   ( from anywhere)
+    * default  (only within same package)
+
+## iii) Special Reference
+* this ( contenxt fo current object)
+* null ( no reference to anything)
+
+## iv) Field Value
+* Java sets the default value of the fields.
+* Various default values of types are :-
+    * byte, short, int, long -> 0
+    * float, double -> 0.0
+    * char -> '/u0000'
+    * boolean -> false
+    * Reference Types -> null
+* We can change the default value of the fields usign following ways:-
+    * Field Initializers
+    * Constrcutors
+    * Intialization blocks
+
+### a) Field Initializers
+* Specifiy field's initial value as part od the field's declaration
+* Can be an equation.
+* can include method fields.
+* can include method calls.
+```
+public class Earth{
+    long circumferenceInMiles = 294901;
+    long circumferenceInKms = Math.round(circumferenceInMiles * 1.6d);    
+}
+```
+
+### b) Constrcutors
+* Name of constructor is the Name of the class
+* Every class needs to have atleast one constructor.
+* If we dont provide one, java automatically creates one for the class which is public.
+* We can have any number of constructors we need but we need to take care of the following:-
+    * Each must have unique aprameter list
+    * Different number of parameters
+    * Different parameter types
+* Chaining constuctor
+    * Must be first line of constuctor
+    * Use the this keyword followed by parameter list
+    ```
+    public class Passenger{
+        public Passenger(int freeBags){
+            this(freeBags > 1? 25.0d : 50.0d);
+            this.freeBags = freeBags;
+        }
+
+        public Passenger(int freeBags, int checkBags){
+            this(freeBags);
+            this.checkedBags = checkedBags;
+        }
+
+        public Passenger(double perBagFee){
+            this.perBagFee = perBagFee;
+        }
+    }
+    ```
+* Constructor Visibility
+    * Cosntructors can be non public
+
+### c) Initialization Block
+* Share code across all constrcutors
+* Place code within brackets outside of any method or cosntrcutor
+* Does not include any parameter list.
+
+
+## v) Static Members
+* Static memebers are shared class - wide
+    * Not assoscaited with individual instacne
+* Decalred using the static keyword
+    * Accessible using the class name
+* Diferent types of Static members:
+    * Field
+        * A value not assosciated with a apscific isntance.
+        * All instances access the same value.
+    * Method
+        * Performs an action not ties to a specific instance.
+        * Has access to only static members.
+### a) Static Import statement
+* Used with static methods
+* Allows method anme to be used without being class - qualified
+```
+import static com.package.name.ClassName.staticMethodName;
+
+staticMethodName();
+```  
+* _import static com.package.name.ClassName.*_ allows all the static members  methods to be imported.   
