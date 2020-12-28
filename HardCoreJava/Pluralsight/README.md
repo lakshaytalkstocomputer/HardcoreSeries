@@ -30,7 +30,7 @@ Note : We can put line comment in block comment but not block comment in block c
 *    d) Arithmetic operators
 *    e) Data Type Conversions
 
-## Variables
+## a) Variables
 * Named Storage.
 * Strongly Typed.
 * *final* modifier to disable change of value.
@@ -50,7 +50,7 @@ Note : We can put line comment in block comment but not block comment in block c
 ```
 * Above code works because value of `someVariable` was not set. But we cannot again try to set the value of the `someVariable`.
 
-## Primitive DataType
+## b) Primitive DataType
 * Prmitive Data Types are the foundation of all other types. 
 * Various primitive data types are :-
     * Integer
@@ -58,7 +58,7 @@ Note : We can put line comment in block comment but not block comment in block c
     * Character
     * Boolean
 
-### Integer 
+### i) Integer 
 * These are also of four types :-
     * byte   `byte numOfEnglishLetter = 26;`
     * short  `short feetInAMile = 5280;`
@@ -67,24 +67,24 @@ Note : We can put line comment in block comment but not block comment in block c
 * We need to mention L in long otherwise it will be taken as int.
 * [Reference for : Why do we need to mention L even after ddeclaring the variable as long?](https://stackoverflow.com/questions/13134956/what-is-the-reason-for-explicitly-declaring-l-or-ul-for-long-values)
 
-### Float
+### ii) Float
 * There are two types :-
     * float  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `float somefloat  = 42.15f;`
     * double &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `double somDOuble = 0.0000;`
 * We can also add suffix `d` for double variables.
 
-### Character
+### iii) Character
 * Single unicode.
 * Uses single quotes.
 * For characters not present on keyboard we can use `\u` followed by 4-digit hex value.
 
-### Boolean
+### iv) Boolean
 * Stores true/false.
 
-## How prmitive Data types are stored?
+## c) How prmitive Data types are stored?
 * Primitive Stored By Value not By reference.
 
-## Arithmetic Operators
+## d) Arithmetic Operators
 * There are three type of Arithmetic Operators that act on Primitive Data Types
     * Basic
         * Produces a result.
@@ -104,7 +104,7 @@ Note : We can put line comment in block comment but not block comment in block c
     * Equal precendence evaluated left to right.
     * Nested Parenthesis evaluated from inside out.
 
-## Type Conversion
+## e) Type Conversion
 * There are two ways with which we can convert the data type.
     * Implicit Type Conversion
         * Conversion done automatically by compiler.
@@ -121,12 +121,12 @@ Note : We can put line comment in block comment but not block comment in block c
 * if-else_if-else
 * Switch with break
 
-## Block Statement
+## a) Block Statement
 * Group together multiple statements.
 * Variable scope limited to that block.
 
 # 6. Looping and Arrays
-## Loops
+## a) Loops
 * for loop
     * normal for loop
         * `for( <intiliazation> ; <condition> ; <updator>) {}`
@@ -135,7 +135,7 @@ Note : We can put line comment in block comment but not block comment in block c
 * while loop
 * do-while loop
 
-## Arrays
+## b) Arrays
 * Collection of elements of same type
 * zero based indexing
 * `.length` attribute for knowing the length.
@@ -203,7 +203,7 @@ Note : We can put line comment in block comment but not block comment in block c
     ```
     * Allows `indexOf`,`insertAt` methods. 
 
-# 9. Classes and Inheritence
+# 9. Classes
 * Declaring Classes
 * Class Mmebers
 * Working with objects
@@ -234,17 +234,17 @@ MyClass[] someVar = new MyClass[4];
 This creates an array which can hold refernce to 4 objects of type MyClass. Objects are not created yet.
 ```
 
-## ii) Encapsulation and Access Modifiers
+### ii) Encapsulation and Access Modifiers
 * Different Access Modifiers are :-
     * Private  ( only inside the class)
     * Public   ( from anywhere)
     * default  (only within same package)
 
-## iii) Special Reference
+### iii) Special Reference
 * this ( contenxt fo current object)
 * null ( no reference to anything)
 
-## iv) Field Value
+### iv) Field Value
 * Java sets the default value of the fields.
 * Various default values of types are :-
     * byte, short, int, long -> 0
@@ -257,7 +257,7 @@ This creates an array which can hold refernce to 4 objects of type MyClass. Obje
     * Constrcutors
     * Intialization blocks
 
-### a) Field Initializers
+###  Field Initializers
 * Specifiy field's initial value as part od the field's declaration
 * Can be an equation.
 * can include method fields.
@@ -269,7 +269,7 @@ public class Earth{
 }
 ```
 
-### b) Constrcutors
+### Constrcutors
 * Name of constructor is the Name of the class
 * Every class needs to have atleast one constructor.
 * If we dont provide one, java automatically creates one for the class which is public.
@@ -300,13 +300,13 @@ public class Earth{
 * Constructor Visibility
     * Cosntructors can be non public
 
-### c) Initialization Block
+### Initialization Block
 * Share code across all constrcutors
 * Place code within brackets outside of any method or cosntrcutor
 * Does not include any parameter list.
 
 
-## v) Static Members
+## b) Static Members
 * Static memebers are shared class - wide
     * Not assoscaited with individual instacne
 * Decalred using the static keyword
@@ -318,7 +318,7 @@ public class Earth{
     * Method
         * Performs an action not ties to a specific instance.
         * Has access to only static members.
-### a) Static Import statement
+### i) Static Import statement
 * Used with static methods
 * Allows method anme to be used without being class - qualified
 ```
@@ -327,3 +327,19 @@ import static com.package.name.ClassName.staticMethodName;
 staticMethodName();
 ```  
 * _import static com.package.name.ClassName.*_ allows all the static members  methods to be imported.   
+
+
+## c) Parameter Passing
+* By Value - Prmitive Type
+* By Reference - Objects
+
+## d) Method Overloading
+* Signature Checking
+* One Method os name _someMethod_ can call other method _someMethod_ which is an overload.
+* Automatic Casting works in method overloading as well.
+
+## e) Variadic Function
+* Last parameter should be the variadic paramter.
+
+
+# Inhertence
