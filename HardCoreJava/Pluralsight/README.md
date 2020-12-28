@@ -457,9 +457,23 @@ class SomeClass implements Comparable<SomeClass> {}
     * the other links type instances
 * Both categor are similar in syntax but different in behaviour
 * We use nested class to naming scope.
-    * Type name scoped within enclosing type.
-    * No relationship between nested type and enclosing trype instance.
+    * Type name scoped within enclosing type. (static class)
+    * No relationship between nested type and enclosing trype instance. ( non static class)
 * Applies to the following nested type,
     * Static classes nestedd within classes
     * all classes nested wihtin interfaces
     * All nested interfaces.
+* Allows Anonymous Class
+    * Declared as part of their creation
+    * Use as simple interface implementaions
+    * Use as simple class extensions
+    * Anonymous Classes arte inner classes
+        * Instance is assosciated with enclosing class instance
+        * 
+
+# 13) The double colon (::) operator, 
+* This is also known as method reference operator in Java, is used to call a method by referring to it with the help of its class directly.
+* Method reference or double colon operator can be used to refer:
+    * a static method,
+    * an instance method, or
+    * a constructor.
