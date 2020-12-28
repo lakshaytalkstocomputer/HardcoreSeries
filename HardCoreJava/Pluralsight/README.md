@@ -342,4 +342,124 @@ staticMethodName();
 * Last parameter should be the variadic paramter.
 
 
-# Inhertence
+# 10) Inhertence
+* We can leverage one class to ahve features from other class using inheritence.
+* One class can hide or override the members of its base class.
+* Java Object Class.
+* Equality checks in inhertence.
+* A class can extend only one class
+
+## a) How to inherit from one class to another?
+* Use _extends_ keyword.
+* When starting out derived class starts with all the characterstics of base class
+
+## b) What are features of new class that we can use and what dictates it?
+* Let us take an example.
+    * There is an base class named _SomeBaseClass_.
+    * There is an derived class named _SomeDerivedClass_.
+    * Obviously, derived class is created using _extends_ keyword from base class.
+    * Now if we create an object of _SomeDerivedClass_ and put it into the variable of type _SomeBaseClass_, the newly added features of _SomeDerivedClass_ will not work.
+    ```
+    SomeBaseClass obj = new SomeDerivedClass();
+    ```
+## c) Member Overriding and Hiding
+* Member Attributes are hidden.
+* Member Methods are overridden.
+* Member Attributes use the type of reference or variable type.
+* Member Methods use the type of instance.
+
+## Object Class
+* Every class automatically extends Object Class.
+
+## super Keyword
+* Can use to refer to base class.
+
+## final keyword
+* We can prevent inheritence by marking the class final.
+* We can prevent method overriding by marking it as final.
+
+## abstract keyword
+* If we mark a method abstract, we need to mark the class abstract as well.
+* This means we cannot create instance of that class.
+* We can have reference of that class, we can extend it, but cannot create object of this class.
+
+## Constructors in inheritence.
+* constructors are not inherited.
+* When we create a derived class instance, base class constructor is always called. By default no-argumetn version is called.
+* We can excplicitly call a base constructor by usign the super keyword.
+* This hsould be the first line of the constructor.
+
+# 11) Enums
+* Enums are like Classes
+* They provide two methods
+    * value
+    * valueOf
+* The order in which enums are provided matter if we want to check bigger or smaller.
+* Enum Types are Class bu they inherit from JAva Enum Class.
+* They can have fields and methods.
+* Every member is an instance of that type.
+* When defining instance in an Enum, we can call constructor.
+
+# 12) Interfaces
+* The need for more than inheritence.
+* Implementing an interface.
+* Generic Interfaces
+* Implementing multiple interfaces
+* Declaring an interface
+* Default methods
+
+## What is Interface and why do we need them?
+* Interfaces defines a contract
+* It provides a list of operations.
+* Does not focus on implementation details.
+* Classes implement interfaces.
+* Classes conform to the contract.
+* Classes provide necesaary methods.
+
+## Implementing a interface
+* We can implement an interface using _implements_ keyword.
+* A class can implement multiple interfaces.
+
+## Generic Interface
+* We can create a generic interface which can take in DataType while implementing 
+that.
+* _Comparable_ is a type of generic interface which provide compareTo functionality 
+to allow comparing of instances or ordering of instances.
+```
+class SomeClass implements Comparable<SomeClass> {}
+```
+## Declaring an interface
+* Use _interface) keyword instead of _class_ keyword.
+* Define one or more methods with **Name**, **parameters**, **return type**.
+* Implicitly public 
+* Fields are constant , public, final and static.
+* Interface can extend other interface using _extend_ keyword.
+* When classes implemnt derived interface that class need to implment al the methods of base interface as well as derived interface.
+* Interface allow default method implementation using __default__ keyword in interfaces.
+
+# 12) Nested Class
+* Declaring one type wihtin another type.
+* Nesting type for naming scope.
+* Inner classes.
+* Anonymous classes.
+
+##  Nested Class
+* A type declared within another type
+* Are members of the enclosing type
+    * Nessted type can access private members of enclosing class
+* Nested types support all access modifiers.
+    * No modifier (a.k.a package private)
+    * public
+    * private
+    * protected
+* Two categories of nested classes.
+    * one provided only naming scope
+    * the other links type instances
+* Both categor are similar in syntax but different in behaviour
+* We use nested class to naming scope.
+    * Type name scoped within enclosing type.
+    * No relationship between nested type and enclosing trype instance.
+* Applies to the following nested type,
+    * Static classes nestedd within classes
+    * all classes nested wihtin interfaces
+    * All nested interfaces.
